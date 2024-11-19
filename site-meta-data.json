@@ -12,17 +12,24 @@
     "interestsvn": "AI trong phân tích và sinh mã nguồn | Hệ thống gợi ý cho Công nghệ phần mềm | AI trong Bảo mật phần mềm",
     "news": [
       {
-        "date": "July 2024",
-        "datevn": "Tháng 7, 2024",
+        "date": "Current",
+        "datevn": "Hiện Tại",
         "content": "We are actively recruiting new members !!! Please contact us and introduce yourself.",
         "contentvn": "Chúng tôi luôn tìm kiếm các tuyển thành viên mới !!! Hãy liên lạc với chúng tôi và giới thiệu về bạn !.",
         "link": "https://ai4code-hust.github.io/contact"
       },
       {
+        "date": "October 2024",
+        "datevn": "Tháng 10, 2024",
+        "content": "Congrats Trang on receiving the VinGroup Scholarship for pursuing PhD overseas",
+        "contentvn": "Chúc mừng Trang nhận được học bổng toàn phần từ Tập đoàn VinGroup để học Tiến Sỹ tại nước ngoài.",
+        "link": "https://scholarships.vinuni.edu.vn/"
+      },
+      {
         "date": "April 2024",
         "datevn": "Tháng 4, 2024",
-        "content": "Congrats Phuc Thanh on receiving research engineer offer from Singapore Management University.",
-        "contentvn": "Chúc mừng Phúc Thành đã nhận được lời mời làm kỹ sư nghiên cứu từ Đại học Quản Lý Singapore .",
+        "content": "Congrats Phuc Thanh, Manh, and Trang on receiving a research engineer offer from Singapore Management University.",
+        "contentvn": "Chúc mừng Phúc Thành, Mạnh và Trang đã nhận được lời mời làm kỹ sư nghiên cứu từ Đại học Quản Lý Singapore .",
         "link": "https://ai4code-hust.github.io/people/phucthanhnguyen"
       },
       {
