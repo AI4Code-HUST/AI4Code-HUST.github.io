@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  lab-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    network_mode: "host"
