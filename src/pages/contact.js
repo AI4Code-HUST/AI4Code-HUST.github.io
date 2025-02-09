@@ -194,9 +194,9 @@ const ContactPage = ({ data: { site } }) => {
           <div className="primary-content">
             <b>{language === "en" ? "Office: " : "Văn phòng: "}</b>
             {language === "en" ? (
-              <>Hanoi University of Science and Technology, B1 Building, Room 1001, Tran Dai Nghia Road, Hai Ba Trung District, Hanoi, Vietnam.</>
+              <>Room 618 on the 6th floor of Tạ Quang Bửu Library, Hanoi University of Science and Technology (HUST)</>
             ) : (
-              <>Đại học Bách Khoa Hà Nội, Tòa nhà B1, Phòng 1001, Đường Trần Đại Nghĩa, Quận Hai Bà Trưng, Hà Nội, Việt Nam.</>
+              <>Phòng 618, tầng 6, Thư viện Tạ Quang Bửu, Đại học Bách Khoa Hà Nội (HUST)</>
             )}
           </div>
         </div>

@@ -24,13 +24,18 @@ We host our lab website on GitHub at [github.com/AI4Code-HUST/AI4Code-HUST.githu
 
    ```markdown
    ---
-   name: "Your Name"
-   title: "Your Title"
-   organization: "Your Organization"
-   photo: "assets/people/your_photo.png"
-   description: "A brief description about you."
+   template: BlogPost
+   path: /people/<your_name>
+   date: 2022-02-01T06:15:50.738Z
+   title: <Your Name>
+   thumbnail: /assets/people/<your_name>.jpg
+   position: member
+   metaDescription: Undergraduate Student
+   metaDescriptionvn: Sinh viên
+   order: 8
    ---
 
-   More information about you
+   My <linkedin profile> or <github personal page>
+   ```
 
 3. **Make a Pull Request**

@@ -54,19 +54,19 @@ const PeoplePage = ({
     <Layout>
       <HelmetWrapper title="People" />
       <h1>{language === "en" ? "Team Members" : "Thành Viên Nhóm"}</h1>
-      <h2>{language === "en" ? "Supervisors" : "Giảng viên hướng dẫn"}</h2>
+      <h2>{language === "en" ? "Supervisors" : "Giảng Viên Hướng Dẫn"}</h2>
       <div className="grids small" style={{ marginBottom: "32px" }}>
         {supervisors}
       </div>
-      <h2>{language === "en" ? "Leaders" : "Trưởng nhóm"}</h2>
+      <h2>{language === "en" ? "Leaders" : "Trưởng Nhóm"}</h2>
       <div className="grids small" style={{ marginBottom: "32px" }}>
         {leaders}
       </div>
-      <h2>{language === "en" ? "Members" : "Thành Viên"}</h2>
+      <h2>{language === "en" ? "Undergraduates" : "Sinh Viên"}</h2>
       <div className="grids small" style={{ marginBottom: "32px" }}>
         {currentPeople}
       </div>
-      <h2>{language === "en" ? "Alumni" : "Cựu Thành Viên"}</h2>
+      <h2>{language === "en" ? "Alumni" : "Cựu Sinh Viên"}</h2>
       <div className="grids small" style={{ marginBottom: "32px" }}>
         {prevPeople}
       </div>
