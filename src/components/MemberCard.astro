@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  role: string;
+  photo?: string;
+}
+
+const { name, role, photo } = Astro.props;
+---
+
+<div class="member">
+  {photo && <div class="leader-photo lighten"><img src={photo} alt={name} loading="lazy" /></div>}
+  <div>
+    <div class="nm">{name}</div>
+    <div class="text-muted" style="font-size:13px;">{role}</div>
+  </div>
+</div>

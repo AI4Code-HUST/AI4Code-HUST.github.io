@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MemberCard from '../components/MemberCard.astro';
+import { team } from '../data/team';
+
+const [principalSupervisor, coSupervisor, mentors, ...rest] = team;
+---
+
+<Layout title="Team — AI4Code@HUST Lab" active="team">
+  <main style="max-width:1120px; margin:0 auto; padding:0 40px;">
+    <header class="page-header">
+      <span class="kick"><i></i>The people behind AI4Code</span>
+      <h1 class="page-title" style="margin:22px 0 0; letter-spacing:-0.03em;">Team members</h1>
+    </header>
+
+    <section class="team-section" style="padding-top:8px;">
+      <h2 class="sechead">{principalSupervisor.label} <span class="mono">{principalSupervisor.number}</span></h2>
+      <article class="team-feature team-feature--compact">
+        <div class="team-feature-photo lighten">
+          <img src={principalSupervisor.members[0].photo} alt={principalSupervisor.members[0].name} loading="lazy" />
+        </div>
+        <div class="team-feature-copy">
+          <h2 class="team-feature-name">{principalSupervisor.members[0].name}</h2>
+          <p class="team-feature-role">{principalSupervisor.members[0].role}</p>
+          <!-- <p class="team-feature-note text-muted">
+            Leads the lab’s overall direction and supervisory work.
+          </p> -->
+        </div>
+      </article>
+    </section>
+
+    <section class="team-row-grid">
+      <section class="team-section team-panel">
+        <h2 class="sechead">{coSupervisor.label} <span class="mono">{coSupervisor.number}</span></h2>
+        <div class="team-photo-grid team-photo-grid--single">
+          {coSupervisor.members.map((m) => (
+            <article class="team-photo-card glow-card">
+              <MemberCard name={m.name} role={m.role} photo={m.photo} />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="team-section team-panel">
+        <h2 class="sechead">{mentors.label} <span class="mono">{mentors.number}</span></h2>
+        <div class="team-photo-grid team-photo-grid--quad">
+          {mentors.members.map((m) => (
+            <article class="team-photo-card glow-card">
+              <MemberCard name={m.name} role={m.role} photo={m.photo} />
+            </article>
+          ))}
+        </div>
+      </section>
+    </section>
+
+    {rest.map((section, i) => (
+      <section class="team-section" style={`padding:0 0 ${i === rest.length - 1 ? '72px' : '48px'};`}>
+        <h2 class="sechead">{section.label} <span class="mono">{section.number}</span></h2>
+        {section.members.length > 0 ? (
+          <div class="team-roster">
+            {section.members.map((m) => (
+              <div class="roster-row">
+                <span class="nm">{m.name}</span>
+                <span class="role text-muted">{m.role}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="team-empty">
+            <p style="margin:0 0 6px; font-size:15px;">No {section.label.toLowerCase()} are listed yet.</p>
+            <p class="text-muted" style="margin:0; font-size:13px;">Check back soon, or reach out via the contact page.</p>
+          </div>
+        )}
+      </section>
+    ))}
+  </main>
+</Layout>

@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { publications, venueFullNames } from '../data/publications';
+
+const TIER_ORDER: Record<string, number> = {
+  'tag-green': 0,
+  'tag-gold': 1,
+  'tag-blue': 2,
+  'tag-rose': 3,
+  'tag-neutral': 4,
+};
+---
+
+<Layout title="Publications — AI4Code@HUST Lab" active="publications">
+  <main style="max-width:1000px; margin:0 auto; padding:0 40px;">
+    <header class="page-header">
+      <span class="kick"><i></i>Peer-reviewed research</span>
+      <h1 class="page-title" style="margin:22px 0 16px; letter-spacing:-0.03em;">Publications</h1>
+    </header>
+
+    <div style="display:flex; gap:16px; flex-wrap:wrap; padding:8px 0 8px; font-size:12px;" class="mono text-muted">
+      <span><span class="tag tag-green" style="padding:2px 8px;">A* / A / Q1</span></span>
+      <span><span class="tag tag-gold" style="padding:2px 8px;">B / Q2</span></span>
+      <span><span class="tag tag-blue" style="padding:2px 8px;">C / Q3</span></span>
+      <span><span class="tag tag-rose" style="padding:2px 8px;">Q4 · Vietnam</span></span>
+      <span><span class="tag tag-neutral" style="padding:2px 8px;">Preprint</span></span>
+    </div>
+
+    <section style="display:flex; flex-direction:column; gap:42px; padding:24px 0 72px;">
+      {publications.map((group) => (
+        <div class="yr">
+          <div class="yr-label">{group.year}</div>
+          <div>
+            {[...group.items].sort((a, b) => TIER_ORDER[a.rankClass] - TIER_ORDER[b.rankClass]).map((pub) => {
+              const Tag = pub.url ? 'a' : 'div';
+              const fullVenue = venueFullNames[pub.venue] ?? pub.venue;
+              const acronym = venueFullNames[pub.venue] ? pub.venue : null;
+              return (
+                <Tag class="pub" href={pub.url}>
+                  <div>
+                    <div class="pub-title">
+                      {pub.title}
+                      {pub.award && (
+                        <span class="award-badge mono" title={pub.award}>
+                          <i class="ph-fill ph-trophy"></i> {pub.award}
+                        </span>
+                      )}
+                    </div>
+                    <div class="text-muted ven-full">
+                      {fullVenue}
+                      {acronym && <span class="mono ven-acronym"> ({acronym})</span>}
+                    </div>
+                    <p class="text-muted pub-auth">{pub.authors}</p>
+                  </div>
+                  <div class="rank">
+                    <span class={`tag ${pub.rankClass} vtag`}>{pub.rankLabel}</span>
+                  </div>
+                </Tag>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </section>
+  </main>
+</Layout>
