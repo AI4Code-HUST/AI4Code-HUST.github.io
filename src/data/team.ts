@@ -71,7 +71,7 @@ export const team: TeamSection[] = [
       { name: 'Nguyễn Phúc Thành', role: 'Research Engineer, Singapore Management University' },
       { name: 'Đặng Hoàng Long', role: 'Software Engineer, Viettel Solutions' },
       { name: 'Hồ Trung Công', role: 'Software Engineer, EVN-ICT' },
-      { name: 'Trần Dương Chính', role: 'Research Assistant, Vin University' },
+      { name: 'Trần Dương Chính', role: 'PhD Student, Nanyang Technological University' },
     ],
   },
 ];
